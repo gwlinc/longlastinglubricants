@@ -17,6 +17,8 @@ const EmailWrapper = styled.div`
   background-color: goldenrod;
   display: flex;
   flex-direction: row;
+  postion: relative;
+  text-align: center;
 `;
 
 function EmailSignUp() {

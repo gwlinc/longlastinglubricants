@@ -11,6 +11,9 @@ function Footer() {
   return (
     <Wrapper>
       <section>
+        <LocaleToggle />
+      </section>
+      <section>
         <FormattedMessage {...messages.addressMessage} />
       </section>
       <section>
@@ -40,9 +43,6 @@ function Footer() {
             ),
           }}
         />
-      </section>
-      <section>
-        <LocaleToggle />
       </section>
     </Wrapper>
   );
