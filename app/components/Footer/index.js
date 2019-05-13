@@ -1,11 +1,22 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import styled from 'styled-components';
 
 import A from 'components/A';
 import LocaleToggle from 'containers/LocaleToggle';
 // import EmailSignUp from 'components/Footer/EmailSignUp';
 import Wrapper from './Wrapper';
 import messages from './messages';
+
+const Copyright = styled.div`
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+`;
 
 function Footer() {
   return (
@@ -34,16 +45,18 @@ function Footer() {
           }}
         />
       </section>
-      <section>
-        <FormattedMessage
-          {...messages.copyRightsMessage}
-          values={{
-            goldenWestLink: (
-              <A href="https://gwlinc.com/">GoldenWest Lubricants, Inc.</A>
-            ),
-          }}
-        />
-      </section>
+      <Copyright>
+        <section>
+          <FormattedMessage
+            {...messages.copyRightsMessage}
+            values={{
+              goldenWestLink: (
+                <A href="https://gwlinc.com/">GoldenWest Lubricants, Inc.</A>
+              ),
+            }}
+          />
+        </section>
+      </Copyright>
     </Wrapper>
   );
 }
