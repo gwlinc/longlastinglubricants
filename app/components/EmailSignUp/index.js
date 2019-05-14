@@ -17,8 +17,9 @@ const EmailWrapper = styled.div`
   background-color: goldenrod;
   display: flex;
   flex-direction: row;
-  postion: relative;
+  postion: absolute;
   text-align: center;
+  width: 100%;
 `;
 
 function EmailSignUp() {
@@ -33,7 +34,7 @@ function EmailSignUp() {
           <Input
             id="email"
             type="text"
-            placeholder="YOUR EMAIL HERE"
+            placeholder="YOUR EMAIL"
             // value={username}
             // onChange={onChangeUsername}
           />
