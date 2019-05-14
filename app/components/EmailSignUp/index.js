@@ -12,6 +12,8 @@ import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 import Form from './Form';
 import Input from './Input';
+import SignUpMessage from './SignUpMessage';
+import Button from './Button';
 
 const EmailWrapper = styled.div`
   background-color: goldenrod;
@@ -20,14 +22,17 @@ const EmailWrapper = styled.div`
   postion: absolute;
   text-align: center;
   width: 100%;
+  padding: 5px;
 `;
 
 function EmailSignUp() {
   return (
     <EmailWrapper>
-      <section>
-        <FormattedMessage {...messages.textFieldMessage} />
-      </section>
+      <SignUpMessage>
+        <b>
+          <FormattedMessage {...messages.textFieldMessage} />
+        </b>
+      </SignUpMessage>
       <Form>
         <label htmlFor="email">
           {/* <FormattedMessage {...messages.emailFieldDefaultMessage} /> */}
@@ -39,6 +44,9 @@ function EmailSignUp() {
             // onChange={onChangeUsername}
           />
         </label>
+        <Button>
+          <input type="submit" value=">" />
+        </Button>
       </Form>
     </EmailWrapper>
   );
