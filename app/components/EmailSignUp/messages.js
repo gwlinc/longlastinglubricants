@@ -11,7 +11,7 @@ export const scope = 'app.components.EmailSignUp';
 export default defineMessages({
   textFieldMessage: {
     id: `${scope}.textFieldMessage.message`,
-    defaultMessage: 'SIGN UP FOR NEWS AND SPECIAL OFFERS',
+    defaultMessage: 'SIGN UP FOR SPECIAL OFFERS',
   },
   // emailFieldDefaultMessage: {
   //   id: `${scope}.emailFieldDefaultMessage.message`,
