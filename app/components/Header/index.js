@@ -7,6 +7,7 @@ import Img from './Img';
 // import HeaderLink from './HeaderLink';
 import Banner from './banner.jpg';
 // import messages from './messages';
+import AppBar from '../MaterialUI/AppBar';
 
 function Header() {
   return (
@@ -14,6 +15,7 @@ function Header() {
       <A href="https://www.reactboilerplate.com/">
         <Img src={Banner} alt="react-boilerplate - Logo" />
       </A>
+      <AppBar />
       {/* <NavBar>
         <HeaderLink to="/">
           <FormattedMessage {...messages.home} />
