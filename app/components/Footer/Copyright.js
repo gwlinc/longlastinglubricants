@@ -4,8 +4,7 @@ const Copyright = styled.div`
   background-color: black;
   color: white;
   text-align: center;
-  position: fixed;
-  left: 0;
+  position: relative;
   bottom: 0;
   width: 100%;
 `;
