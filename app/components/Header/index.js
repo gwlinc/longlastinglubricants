@@ -12,10 +12,10 @@ import AppBar from '../MaterialUI/AppBar';
 function Header() {
   return (
     <div>
+      <AppBar />
       <A href="https://www.reactboilerplate.com/">
         <Img src={Banner} alt="react-boilerplate - Logo" />
       </A>
-      <AppBar />
       {/* <NavBar>
         <HeaderLink to="/">
           <FormattedMessage {...messages.home} />

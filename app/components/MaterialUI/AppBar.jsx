@@ -13,9 +13,11 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import MailIcon from '@material-ui/icons/Mail';
+// import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import SVGIcon from './SVGIcon';
+import A from '../A';
 
 const styles = theme => ({
   root: {
@@ -138,26 +140,30 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMobileMenuClose}>
-          <IconButton>
-            <Badge badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
+          <A href="https://www.facebook.com/goprolong">
+            <SVGIcon name="facebook" width={35} />
+          </A>
         </MenuItem>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton>
-            <Badge badgeContent={11} color="secondary">
-              <NotificationsIcon />
-            </Badge>
+            <A href="https://www.instagram.com/goprolong/">
+              <SVGIcon name="instagram" width={35} />
+            </A>
           </IconButton>
-          <p>Notifications</p>
         </MenuItem>
         <MenuItem onClick={this.handleProfileMenuOpen}>
           <IconButton>
-            <AccountCircle />
+            <A href="https://twitter.com/go_prolong">
+              <SVGIcon name="twitter" width={35} />
+            </A>
           </IconButton>
-          <p>Profile</p>
+        </MenuItem>
+        <MenuItem onClick={this.handleProfileMenuOpen}>
+          <IconButton>
+            <A href="https://www.youtube.com/channel/UC6UmLgeWWr-9hUz5BuXG2Zg/featured">
+              <SVGIcon name="youtube" width={35} />
+            </A>
+          </IconButton>
         </MenuItem>
       </Menu>
     );
@@ -187,21 +193,24 @@ class PrimarySearchAppBar extends React.Component {
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
               <IconButton>
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
+                <A href="https://www.facebook.com/goprolong">
+                  <SVGIcon name="facebook" width={35} />
+                </A>
               </IconButton>
               <IconButton>
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
+                <A href="https://www.instagram.com/goprolong/">
+                  <SVGIcon name="instagram" width={35} />
+                </A>
               </IconButton>
-              <IconButton
-                aria-owns={isMenuOpen ? 'material-appbar' : undefined}
-                aria-haspopup="true"
-                onClick={this.handleProfileMenuOpen}
-              >
-                <AccountCircle />
+              <IconButton>
+                <A href="https://twitter.com/go_prolong">
+                  <SVGIcon name="twitter" width={35} />
+                </A>
+              </IconButton>
+              <IconButton>
+                <A href="https://www.youtube.com/channel/UC6UmLgeWWr-9hUz5BuXG2Zg/featured">
+                  <SVGIcon name="youtube" width={35} />
+                </A>
               </IconButton>
             </div>
             <div className={classes.sectionMobile}>
