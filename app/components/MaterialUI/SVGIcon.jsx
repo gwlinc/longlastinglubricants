@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 
 const getViewBox = name => {
   switch (name) {
-    case 'phone':
-      return '0 0 32 33';
-    case 'message':
-      return '0 0 38 34';
-    case 'envelope':
-      return '0 0 40 26';
-    case 'trash':
-      return '0 0 13.5 17.5';
-    case 'wifi':
-      return '0 0 12 9';
+    case 'facebook':
+      return '-5.5 -4 35 35';
+    case 'instagram':
+      return '-5.5 -4 35 35';
+    case 'twitter':
+      return '-5.5 -4 35 35';
+    case 'youtube':
+      return '-5.5 -4 35 35';
     default:
-      return '0 0 32 32';
+      return '-5.5 -4 35 35';
   }
 };
 
@@ -44,7 +42,7 @@ const getPath = name => {
 const SVGIcon = ({
   name = '',
   style = {},
-  fill = '#000',
+  fill = 'white',
   viewBox = '',
   width = '100%',
   className = '',
@@ -53,6 +51,7 @@ const SVGIcon = ({
   <svg
     width={width}
     style={style}
+    fill={fill}
     height={height}
     className={className}
     xmlns="http://www.w3.org/2000/svg"
@@ -65,11 +64,11 @@ const SVGIcon = ({
 
 SVGIcon.propTypes = {
   name: PropTypes.string,
-  width: PropTypes.string,
+  width: PropTypes.number,
   style: PropTypes.object,
-  height: PropTypes.string,
+  height: PropTypes.number,
   className: PropTypes.string,
-  fill: PropTypes.object,
+  fill: PropTypes.string,
   viewBox: PropTypes.string,
 };
 
