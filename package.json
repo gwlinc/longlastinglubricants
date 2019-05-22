@@ -94,6 +94,10 @@
     "reselect": "4.0.0",
     "sanitize.css": "8.0.0",
     "styled-components": "4.2.0"
+<<<<<<< HEAD
+=======
+    
+>>>>>>> f8cfd14df5ba933da38f2a0faabad1abc2a10d63
   },
   "devDependencies": {
     "@babel/cli": "7.4.3",
