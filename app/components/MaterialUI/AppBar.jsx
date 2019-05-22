@@ -21,8 +21,10 @@ import A from '../A';
 import Img from './Img';
 import logo from './prolong.png';
 import { isClassExpression } from '@babel/types';
+import indigo from '@material-ui/core/colors/indigo';
 // import 'file?name=prolong.png!../../../assets/images/prolong.png';
 
+const primary = indigo[900];
 
 const styles = theme => ({
   root: {
