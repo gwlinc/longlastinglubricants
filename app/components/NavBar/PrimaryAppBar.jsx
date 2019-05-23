@@ -1,30 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-// import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import SVGIcon from './SVGIcon.jsx';
+import SVGIcon from '../MaterialUI/SVGIcon';
 import A from '../A';
-import Img from './Img';
-import logo from './prolong.png';
-import { isClassExpression } from '@babel/types';
-import indigo from '@material-ui/core/colors/indigo';
-// import 'file?name=prolong.png!../../../assets/images/prolong.png';
-
-const primary = indigo[900];
+import logo from '../MaterialUI/prolong.png';
 
 const styles = theme => ({
   root: {
@@ -94,7 +82,7 @@ const styles = theme => ({
   },
 });
 
-class PrimarySearchAppBar extends React.Component {
+class PrimaryAppBar extends Component {
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
@@ -145,7 +133,7 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMobileMenuClose}>
-          <IconButton>            
+          <IconButton>
             <A href="https://www.facebook.com/goprolong">
               <SVGIcon name="facebook" width={35} />
             </A>
@@ -183,7 +171,11 @@ class PrimarySearchAppBar extends React.Component {
               Prolong
             </Typography> */}
             <A>
-              <img src={logo} className={classes.title} alt="Prolong Super Lubricants - Logo" />
+              <img
+                src={logo}
+                className={classes.title}
+                alt="Prolong Super Lubricants - Logo"
+              />
             </A>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -234,8 +226,8 @@ class PrimarySearchAppBar extends React.Component {
   }
 }
 
-PrimarySearchAppBar.propTypes = {
+PrimaryAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PrimarySearchAppBar);
+export default withStyles(styles)(PrimaryAppBar);
