@@ -1,46 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar, Toolbar, Button } from '@material-ui/core';
 
 const styles = {
   root: {
     flexGrow: 1,
+    height: 45,
   },
   grow: {
     flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+    textAlign: 'center',
   },
 };
 
 const SecondAppBar = props => {
   const { classes } = props;
+  const products = [
+    'PRODUCTS',
+    'WARRANTY',
+    'REGISTER WARRANTY',
+    'GOLDENWEST',
+    'ABOUT',
+  ];
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="secondary" variant="dense">
-        <Toolbar>
-          <IconButton
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="Menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <AppBar position="static" color="secondary" className={classes.root}>
+      <Toolbar variant="dense">
+        {products.map(product => (
+          <Button className={classes.grow}>{product}</Button>
+        ))}
+      </Toolbar>
+    </AppBar>
   );
 };
 
