@@ -10,9 +10,9 @@ import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import SVGIcon from '../MaterialUI/SVGIcon';
+import SVGIcon from './SVGIcon';
 import A from '../A';
-import logo from '../MaterialUI/prolong.png';
+import logo from './prolong.png';
 
 const styles = theme => ({
   root: {
