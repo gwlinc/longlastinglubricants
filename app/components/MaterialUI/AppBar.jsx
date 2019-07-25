@@ -16,8 +16,15 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 // import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import SVGIcon from './SVGIcon';
+import SVGIcon from './SVGIcon.jsx';
 import A from '../A';
+import Img from './Img';
+import logo from './prolong.png';
+import { isClassExpression } from '@babel/types';
+import indigo from '@material-ui/core/colors/indigo';
+// import 'file?name=prolong.png!../../../assets/images/prolong.png';
+
+const primary = indigo[900];
 
 const styles = theme => ({
   root: {
@@ -31,10 +38,8 @@ const styles = theme => ({
     marginRight: 20,
   },
   title: {
-    display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'block',
-    },
+    display: 'block',
+    width: '100%',
   },
   search: {
     position: 'relative',
@@ -140,9 +145,11 @@ class PrimarySearchAppBar extends React.Component {
         onClose={this.handleMenuClose}
       >
         <MenuItem onClick={this.handleMobileMenuClose}>
-          <A href="https://www.facebook.com/goprolong">
-            <SVGIcon name="facebook" width={35} />
-          </A>
+          <IconButton>            
+            <A href="https://www.facebook.com/goprolong">
+              <SVGIcon name="facebook" width={35} />
+            </A>
+          </IconButton>
         </MenuItem>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton>
@@ -170,14 +177,14 @@ class PrimarySearchAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
+        <AppBar position="static" color="primary">
           <Toolbar>
-            <IconButton className={classes.menuButton} aria-label="Open drawer">
-              <MenuIcon />
-            </IconButton>
-            <Typography className={classes.title} variant="h6" noWrap>
-              Material-UI
-            </Typography>
+            {/* <Typography className={classes.title} variant="h6" noWrap>
+              Prolong
+            </Typography> */}
+            <A>
+              <img src={logo} className={classes.title} alt="Prolong Super Lubricants - Logo" />
+            </A>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
