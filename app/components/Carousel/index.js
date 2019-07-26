@@ -6,13 +6,21 @@
 
 import React from 'react';
 import Slider from 'react-slick';
+// import ProductSlider from './productSlider.js';
+import Img from './Img';
+import Container from './container';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import image1 from './images/4thOfJulyAd_2.jpg';
+import image2 from './images/aapex.jpg';
+import image3 from './images/ContestResults.jpg';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+// import { FormattedMessage } from 'react-intl';
+// import messages from './messages';
 
 function Carousel() {
   const settings = {
@@ -23,29 +31,21 @@ function Carousel() {
     slidesToScroll: 1,
     pauseOnHover: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
+    touchMove: true,
   };
 
   return (
     <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
+      <Container>
+        <Img src={image1} />
+      </Container>
+      <Container>
+        <Img src={image2} />
+      </Container>
+      <Container>
+        <Img src={image3} />
+      </Container>
     </Slider>
   );
 }
