@@ -31,6 +31,7 @@ import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
+import Carousel from '../../components/Carousel/index';
 import saga from './saga';
 
 const key = 'home';
@@ -68,6 +69,7 @@ export function HomePage({
       </Helmet>
       <div>
         <CenteredSection>
+          <Carousel />
           <H2>
             <FormattedMessage {...messages.startProjectHeader} />
           </H2>
