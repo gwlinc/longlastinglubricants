@@ -7,6 +7,8 @@ const Img = styled(NormalImg)`
   max-height: 100%;
   margin-left: auto;
   margin-right: auto;
+  outline: 0 !important;
+  border: 0 none !important;
 `;
 
 export default Img;

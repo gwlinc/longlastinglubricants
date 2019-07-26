@@ -6,6 +6,8 @@ const container = styled(Section)`
   height: 400px;
   text-align: center;
   background-color: black;
+  outline: 0 !important;
+  border: 0 none !important;
 `;
 
 export default container;
