@@ -1,6 +1,6 @@
 /**
  *
- * Asynchronously loads the component for EmailSignUp
+ * Asynchronously loads the component for AutomotiveCard
  *
  */
 
