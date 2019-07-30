@@ -7,7 +7,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import AutoCard from '../../components/AutomotiveCard/index';
+import IndustrialCard from '../../components/IndustrialCard/index';
+import CommercialCard from '../../components/CommercialCard/index';
+import RacingCard from '../../components/RacingCard/index';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
@@ -17,10 +20,7 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    height: 140,
-    width: 100,
+    padding: 25,
   },
   control: {
     padding: theme.spacing(2),
@@ -33,12 +33,19 @@ function CardsSection() {
   return (
     <Grid container className={classes.root} spacing={2}>
       <Grid item xs={12}>
-        <Grid container justify="center" spacing={10}>
-          {[0, 1, 2, 3].map(value => (
-            <Grid key={value} item>
-              <Paper className={classes.paper} />
-            </Grid>
-          ))}
+        <Grid container justify="center" spacing={5}>
+          <Grid item md={3}>
+            <AutoCard />
+          </Grid>
+          <Grid item md={3}>
+            <CommercialCard />
+          </Grid>
+          <Grid item md={3}>
+            <IndustrialCard />
+          </Grid>
+          <Grid item md={3}>
+            <RacingCard />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
