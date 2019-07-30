@@ -32,6 +32,7 @@ import { changeUsername } from './actions';
 import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import Carousel from '../../components/Carousel/index';
+import Cards from '../../components/CardsSection/index';
 import saga from './saga';
 
 const key = 'home';
@@ -70,15 +71,16 @@ export function HomePage({
       <div>
         <CenteredSection>
           <Carousel />
-          <H2>
+          {/* <H2>
             <FormattedMessage {...messages.startProjectHeader} />
           </H2>
           <p>
             <FormattedMessage {...messages.startProjectMessage} />
-          </p>
+          </p> */}
         </CenteredSection>
         <Section>
-          <H2>
+          <Cards />
+          {/* <H2>
             <FormattedMessage {...messages.trymeHeader} />
           </H2>
           <Form onSubmit={onSubmitForm}>
@@ -96,7 +98,7 @@ export function HomePage({
               />
             </label>
           </Form>
-          <ReposList {...reposListProps} />
+          <ReposList {...reposListProps} /> */}
         </Section>
       </div>
     </article>
