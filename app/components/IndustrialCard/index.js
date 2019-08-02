@@ -32,26 +32,23 @@ const useStyles = makeStyles({
     display: 'grid',
     gridTemplateRows: '1fr auto',
     gridGap: '8px',
-    height: 400,
+    height: 378,
     maxWidth: 370,
   },
   body: {
-    height: 150,
-    width: 150,
+    alignSelf: 'end',
     textAlign: 'center',
-    rounded: true,
-    paddingTop: 65,
-    margin: 'auto',
   },
   actions: {
     display: 'flex',
     justifyContent: 'space-between',
-    position: 'absolute',
+    backgroundColor: '#ffb300',
+    justifyContent: 'center',
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9,
-    marginTop: 50,
+    paddingTop: 28,
+    paddingBottom: 15,
+    overflow: 'visable',
   },
 });
 
@@ -61,10 +58,10 @@ function IndustrialCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia>
+        <CardMedia className={classes.media}>
           <Img src={Industrial} />
         </CardMedia>
-        <CardContent>
+        <CardContent className={classes.body}>
           <Typography gutterBottom variant="h6" component="h2">
             <FormattedMessage {...messages.industrial} />
           </Typography>
@@ -73,9 +70,7 @@ function IndustrialCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions
-        style={{ backgroundColor: '#ffb300', justifyContent: 'center' }}
-      >
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
           <FormattedMessage {...messages.shop} />
         </Button>
