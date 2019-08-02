@@ -33,6 +33,7 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import Carousel from '../../components/Carousel/index';
 import Cards from '../CardsSection/index';
+import AboutUs from '../../components/AboutUs';
 import saga from './saga';
 
 const key = 'home';
@@ -74,6 +75,9 @@ export function HomePage({
         </CenteredSection>
         <Section>
           <Cards />
+        </Section>
+        <Section>
+          <AboutUs />
         </Section>
       </div>
     </article>

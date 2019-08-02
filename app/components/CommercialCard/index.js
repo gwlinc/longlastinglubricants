@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     display: 'grid',
     gridTemplateRows: '1fr auto',
     gridGap: '8px',
-    height: 400,
+    height: 378,
     maxWidth: 370,
   },
   body: {
@@ -41,11 +41,11 @@ const useStyles = makeStyles({
   actions: {
     display: 'flex',
     justifyContent: 'space-between',
+    backgroundColor: '#ffb300',
+    justifyContent: 'center'
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9,
-    marginTop: '30',
+    overflow: 'visable',
   },
 });
 
@@ -55,10 +55,10 @@ function CommercialCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia>
+        <CardMedia className={classes.media} >
           <Img src={Commercial} />
         </CardMedia>
-        <CardContent>
+        <CardContent className={classes.body} >
           <Typography gutterBottom variant="h6" component="h2">
             <FormattedMessage {...messages.commercial} />
           </Typography>
@@ -67,9 +67,7 @@ function CommercialCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions
-        style={{ backgroundColor: '#ffb300', justifyContent: 'center' }}
-      >
+      <CardActions className={classes.actions} >
         <Button size="small" color="primary">
           <FormattedMessage {...messages.shop} />
         </Button>
