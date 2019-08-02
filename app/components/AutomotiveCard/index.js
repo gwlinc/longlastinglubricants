@@ -41,7 +41,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     backgroundColor: '#ffb300',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   media: {
     overflow: 'visable',
@@ -54,10 +54,10 @@ function AutomotiveCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia className={classes.media} >
+        <CardMedia className={classes.media}>
           <Img src={AutoImage} />
         </CardMedia>
-        <CardContent className={classes.body} >
+        <CardContent className={classes.body}>
           <Typography justify="center" gutterBottom variant="h6" component="h2">
             <FormattedMessage {...messages.auto} />
           </Typography>
@@ -66,7 +66,7 @@ function AutomotiveCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions className={classes.actions} >
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
           <FormattedMessage {...messages.shop} />
         </Button>

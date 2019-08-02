@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     backgroundColor: '#ffb300',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   media: {
     overflow: 'visable',
@@ -56,10 +56,10 @@ function RacingCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia className={classes.media} >
+        <CardMedia className={classes.media}>
           <Img src={Racing} />
         </CardMedia>
-        <CardContent className={classes.body} >
+        <CardContent className={classes.body}>
           <Typography gutterBottom variant="h6" component="h2">
             <FormattedMessage {...messages.racing} />
           </Typography>
@@ -68,7 +68,7 @@ function RacingCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions className={classes.actions} >
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
           <FormattedMessage {...messages.shop} />
         </Button>

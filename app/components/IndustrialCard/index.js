@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     backgroundColor: '#ffb300',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   media: {
     paddingTop: 28,
@@ -58,10 +58,10 @@ function IndustrialCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia className={classes.media} >
+        <CardMedia className={classes.media}>
           <Img src={Industrial} />
         </CardMedia>
-        <CardContent className={classes.body} >
+        <CardContent className={classes.body}>
           <Typography gutterBottom variant="h6" component="h2">
             <FormattedMessage {...messages.industrial} />
           </Typography>
@@ -70,7 +70,7 @@ function IndustrialCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions className={classes.actions} >
+      <CardActions className={classes.actions}>
         <Button size="small" color="primary">
           <FormattedMessage {...messages.shop} />
         </Button>
