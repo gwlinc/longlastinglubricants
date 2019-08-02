@@ -13,19 +13,45 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { FormattedMessage } from 'react-intl';
+import Img from './Img';
+import Industrial from './industrial.png';
 // import PropTypes from 'prop-types';
 // import styled from 'styled-components';
 
-import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 
 const useStyles = makeStyles({
+  root: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gridGap: '24px',
+    overflow: 'visable',
+  },
   card: {
-    maxWidth: 150,
-    maxHeight: 150,
+    display: 'grid',
+    gridTemplateRows: '1fr auto',
+    gridGap: '8px',
+    height: 400,
+    maxWidth: 370,
+  },
+  body: {
+    height: 150,
+    width: 150,
+    textAlign: 'center',
+    rounded: true,
+    paddingTop: 65,
+    margin: 'auto',
+  },
+  actions: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'absolute',
   },
   media: {
-    height: 120,
+    height: 0,
+    paddingTop: '56.25%', // 16:9,
+    marginTop: 50,
   },
 });
 
@@ -35,27 +61,23 @@ function IndustrialCard() {
   return (
     <Card className={classes.card}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
+        <CardMedia>
+          <Img src={Industrial} />
+        </CardMedia>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+          <Typography gutterBottom variant="h6" component="h2">
+            <FormattedMessage {...messages.industrial} />
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            <FormattedMessage {...messages.body} />
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions
+        style={{ backgroundColor: '#ffb300', justifyContent: 'center' }}
+      >
         <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+          <FormattedMessage {...messages.shop} />
         </Button>
       </CardActions>
     </Card>

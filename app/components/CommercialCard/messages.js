@@ -9,8 +9,16 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.components.CommercialCard';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the CommercialCard component!',
+  commercial: {
+    id: `${scope}.commercial`,
+    defaultMessage: 'Commercial',
+  },
+  body: {
+    id: `${scope}.body`,
+    defaultMessage: 'Check out our commercial fleet family of products',
+  },
+  shop: {
+    id: `${scope}.shop`,
+    defaultMessage: 'SHOP NOW',
   },
 });

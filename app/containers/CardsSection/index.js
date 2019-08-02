@@ -38,10 +38,10 @@ function CardsSection() {
             <AutoCard />
           </Grid>
           <Grid item md={3}>
-            <CommercialCard />
+            <IndustrialCard />
           </Grid>
           <Grid item md={3}>
-            <IndustrialCard />
+            <CommercialCard />
           </Grid>
           <Grid item md={3}>
             <RacingCard />

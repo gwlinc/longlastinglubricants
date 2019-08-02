@@ -9,8 +9,17 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.components.IndustrialCard';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the IndustrialCard component!',
+  industrial: {
+    id: `${scope}.industrial`,
+    defaultMessage: 'Industrial',
+  },
+  body: {
+    id: `${scope}.body`,
+    defaultMessage:
+      'Maximize protection, proformance and solve lubercation problems',
+  },
+  shop: {
+    id: `${scope}.shop`,
+    defaultMessage: 'SHOP NOW',
   },
 });

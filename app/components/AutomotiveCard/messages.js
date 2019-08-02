@@ -9,8 +9,16 @@ import { defineMessages } from 'react-intl';
 export const scope = 'app.components.AutomotiveCard';
 
 export default defineMessages({
-  header: {
-    id: `${scope}.header`,
-    defaultMessage: 'This is the AutomotiveCard component!',
+  auto: {
+    id: `${scope}.auto`,
+    defaultMessage: 'Automotive',
+  },
+  body: {
+    id: `${scope}.body`,
+    defaultMessage: `Formulated with Prolong's AFMT advanced technology`,
+  },
+  shop: {
+    id: `${scope}.shop`,
+    defaultMessage: 'SHOP NOW',
   },
 });
