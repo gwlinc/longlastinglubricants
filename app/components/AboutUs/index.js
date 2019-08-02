@@ -83,7 +83,7 @@ const useStyles = makeStyles(theme => ({
   },
   input: {
     padding: 6,
-    paddingLeft: 30
+    paddingLeft: 30,
   },
   rightIcon: {
     marginLeft: theme.spacing(1),
@@ -93,8 +93,6 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 35,
   },
 }));
-
-
 
 function AboutUs() {
   const classes = useStyles();
@@ -111,15 +109,19 @@ function AboutUs() {
           <Grid item xs={5}>
             <Img src={HQ} />
           </Grid>
-          <Grid item xs={7} >
-          <Typography className={classes.messageText} variant="body2" component="p">
-            <FormattedMessage {...messages.message} />
-          </Typography>
+          <Grid item xs={7}>
+            <Typography
+              className={classes.messageText}
+              variant="body2"
+              component="p"
+            >
+              <FormattedMessage {...messages.message} />
+            </Typography>
           </Grid>
         </Grid>
         <Grid container spacing={0}>
-          <Grid item xs={7} >
-            <Typography  className={classes.signUpMessage} variant="h6" >
+          <Grid item xs={7}>
+            <Typography className={classes.signUpMessage} variant="h6">
               <FormattedMessage {...messages.signUp} />
             </Typography>
           </Grid>
